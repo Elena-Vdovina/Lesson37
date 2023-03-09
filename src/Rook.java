@@ -27,7 +27,15 @@ public class Rook {
   public void setCoordinates(int row, int column) {
     checkCoordinates(row, column);
     // TODO проверка возможности хода
+    if (this.row == row || this.column == column) {
+      this.row = row;
+      this.column = column;
+      System.out.println("Ладья перешла на клетку " + row + ":" + column);
+    } else {
+      System.out.println("Ладья так не ходит");
+    }
   }
+
 
   private static void checkCoordinates(int row, int column) {
     if (row < 1 || row > 8) {
