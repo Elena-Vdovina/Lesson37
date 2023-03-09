@@ -36,6 +36,12 @@ public class Pawn {
   public void setCoordinates(int row, int column) {
     checkCoordinates(row, column);
     // TODO проверка возможности хода
+    if (row - this.row == 1 && this.column == column) {
+      this.row = row;
+      System.out.println("Пешка перешла на клетку " + row + ":" + column);
+    } else {
+      System.out.println("Пешка так не ходит");
+    }
   }
 
   // проверка корректности координат
